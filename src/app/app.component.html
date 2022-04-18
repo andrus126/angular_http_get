@@ -1,0 +1,15 @@
+
+<div style="text-align:center;">
+  <h1>
+    Bienvenido a {{title}}!
+  </h1>
+  <button (click)="ngTasks()">Obtener las tareas</button>
+  <ul class="list-group">
+    <li 
+        *ngFor="let task of tasks"
+        class="list-group-item">
+        {{ task.title }}
+    </li>
+  </ul>
+</div>
+
