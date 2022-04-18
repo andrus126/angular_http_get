@@ -4,11 +4,17 @@
     Bienvenido a {{title}}!
   </h1>
   <button (click)="ngTasks()">Obtener las tareas</button>
-  <ul class="list-group">
-    <li 
-        *ngFor="let task of tasks"
-        class="list-group-item">
-        {{ task.title }}
+  <ul *ngFor="let task of tasks">
+  
+      
+  
+    <li>
+        
+        {{ task.id | currency}}
+        {{ task.title | uppercase }}
+        {{ task.title | slice:0:20  }}
+        {{ task.completed }}
+        {{ task | json}}
     </li>
   </ul>
 </div>
